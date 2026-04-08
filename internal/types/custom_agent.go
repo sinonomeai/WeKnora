@@ -122,6 +122,14 @@ type CustomAgentConfig struct {
 	// Empty means use the global/tenant default provider.
 	ImageStorageProvider string `yaml:"image_storage_provider" json:"image_storage_provider"`
 
+	// ===== Audio / ASR Settings =====
+	// Whether audio upload is enabled for this agent (default: false)
+	AudioUploadEnabled bool `yaml:"audio_upload_enabled" json:"audio_upload_enabled"`
+	// ASR model ID for audio transcription
+	ASRModelID string `yaml:"asr_model_id" json:"asr_model_id"`
+	// Storage provider for audio uploads
+	AudioStorageProvider string `yaml:"audio_storage_provider" json:"audio_storage_provider"`
+
 	// ===== File Type Restriction Settings =====
 	// Supported file types for this agent (e.g., ["csv", "xlsx", "xls"])
 	// Empty means all file types are supported

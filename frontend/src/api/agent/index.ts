@@ -39,6 +39,10 @@ export interface CustomAgentConfig {
   image_upload_enabled?: boolean;    // 是否启用图片上传（默认: false）
   vlm_model_id?: string;            // VLM模型ID（图片分析用）
   image_storage_provider?: string;   // 图片存储提供商
+  // ===== 音频/ASR 设置 =====
+  audio_upload_enabled?: boolean;   // 是否启用音频上传（默认: false）
+  asr_model_id?: string;            // ASR 模型 ID
+  audio_storage_provider?: string;  // 音频存储提供商
 
   // ===== 文件类型限制 =====
   // 支持的文件类型（如 ["csv", "xlsx", "xls"]）
